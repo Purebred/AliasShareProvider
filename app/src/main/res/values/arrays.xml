@@ -1,0 +1,25 @@
+<!--
+  Copyright 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+    <array name="image_keys">
+        <item>@raw/kff709cb728db6569f6be408cd1a5f4f00aabf93c</item>
+        <item>@raw/kf1ec5ee9a622c4678270a6245e63fa1aa42e6aad</item>
+        <item>@raw/k5b50b7acdf0d0164178209c0b7f7208e57ce712f</item>
+        <item>@raw/k05ab14d4a4870342a18423fa8dc5f4da86c22dd8</item>
+    </array>
+
+</resources>
