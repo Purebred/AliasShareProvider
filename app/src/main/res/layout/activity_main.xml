@@ -29,4 +29,16 @@
         tools:layout_editor_absoluteX="91dp"
         tools:layout_editor_absoluteY="252dp" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="simulateBroadcast"
+        android:text="Simulate update broadcast"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="252dp" />
+
 </RelativeLayout>

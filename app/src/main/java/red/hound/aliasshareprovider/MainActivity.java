@@ -2,6 +2,10 @@ package red.hound.aliasshareprovider;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +18,7 @@ import java.io.InputStream;
 import java.security.Key;
 import java.security.KeyStore;
 import java.util.Enumeration;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -97,5 +102,33 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
         }
+    }
+
+    public void simulateBroadcast(View view)
+    {
+        String broadcastType = "red.hound.purebred.broadcast.UPDATE_COMPLETED";
+        //String broadcastType = "red.hound.purebred.broadcast.RECOVERY_COMPLETED";
+        //String broadcastType = "red.hound.purebred.broadcast.UPDATE_COMPLETED";
+        Intent intent = new Intent();
+        intent.setAction(broadcastType);
+
+        PackageManager pm=getApplicationContext().getPackageManager();
+        List<ResolveInfo> matches=pm.queryBroadcastReceivers(intent, 0);
+
+        for (ResolveInfo resolveInfo : matches) {
+            Intent explicit=new Intent(broadcastType);
+            ComponentName cn=
+                    new ComponentName(resolveInfo.activityInfo.applicationInfo.packageName,
+                            resolveInfo.activityInfo.name);
+
+            explicit.setComponent(cn);
+            getApplicationContext().sendBroadcast(explicit);
+        }
+
+        /*
+        Intent intent = new Intent();
+        intent.setAction(broadcastType);
+        sendBroadcast(intent);
+        */
     }
 }
