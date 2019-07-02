@@ -5,3 +5,5 @@ Purebred provisions keys on Android devices such that applications can use the k
 Recent versions of the Purebred Registration app features a content provider that can be used by applications desiring to use Purebred-provisioned keys via the KeyChain API. The content provider allows applications to obtain a list of aliases and certificates that were provisioned via Purebred to enable a better user experience when using choosePrivateKey.
 
 AliasShareProvider provides an alternative implementation of the content provider implemented by the Purebred application to spare the need to interact with a portal instance during testing. Additionally, AliasShareProvider provides a means of simulating broadcast events emitted by the Purebred Registration app. 
+
+Note, the alias sharing feature was introduced with Purebred v1.5 and later. Unofficial apks for download can be found at https://pbpki.com/pl.
