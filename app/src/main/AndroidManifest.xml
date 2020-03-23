@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="red.hound.aliasshareprovider">
 
-    <permission android:name="red.hound.aliasshareprovider.READ_ALIAS" android:label="read alias" android:protectionLevel="normal"></permission>
+    <permission android:name="red.hound.aliasshareprovider.READ_ALIAS" android:label="read alias" android:protectionLevel="dangerous"></permission>
 
     <application
         android:allowBackup="true"
